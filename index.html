@@ -1,0 +1,594 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Savanna Yoell 💗</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600;700;800&display=swap');
+
+:root {
+  --pink: #ff35a8;
+  --purple: #b721ff;
+  --dark: #100817;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--dark);
+  color: #fff2fb;
+  font-family: Poppins, sans-serif;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 15%, #8b176d35, transparent 35%),
+    radial-gradient(circle at 85% 75%, #6123ad35, transparent 35%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 15px 10px;
+  background: #100817ed;
+  border-bottom: 1px solid #ff35a855;
+}
+
+nav a {
+  color: #ffe5f5;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+nav a:hover { color: var(--pink); }
+
+.hero {
+  min-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 55px 20px;
+  background:
+    linear-gradient(#10081744, #100817d9),
+    radial-gradient(ellipse at top, #a21caf88, transparent 70%);
+}
+
+.eyebrow {
+  color: #ff9cda;
+  letter-spacing: 4px;
+  font-size: 11px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-family: Pacifico, cursive;
+  color: white;
+  font-size: clamp(40px, 9vw, 85px);
+  text-shadow: 0 0 15px #ff35a8, 0 0 45px #ff007f;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #ff35a8; }
+  to { text-shadow: 0 0 25px #ff35a8, 0 0 60px #ff007f; }
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 20px auto;
+  line-height: 1.9;
+  color: #ffd5ef;
+}
+
+button, .song-button {
+  border: none;
+  padding: 13px 22px;
+  border-radius: 40px;
+  color: white;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  background: linear-gradient(100deg, #ff168f, #b721ff);
+  box-shadow: 0 0 22px #ff168f66;
+  transition: transform .2s;
+}
+
+button:hover, .song-button:hover { transform: scale(1.05); }
+
+section {
+  padding: 55px 18px;
+  max-width: 1150px;
+  margin: auto;
+  scroll-margin-top: 75px;
+}
+
+.section-title {
+  font-family: Pacifico, cursive;
+  color: #ff72c6;
+  text-align: center;
+  font-size: clamp(28px, 5vw, 42px);
+  margin-bottom: 28px;
+  text-shadow: 0 0 15px #ff168f55;
+}
+
+.card {
+  background: linear-gradient(145deg, #26102fef, #140b20f5);
+  border: 1px solid #ff35a855;
+  border-radius: 24px;
+  padding: 25px;
+  box-shadow: 0 10px 35px #0004;
+}
+
+.card h3 { color: #ff83d0; margin-bottom: 12px; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.letter {
+  color: #ffe0f4;
+  font-size: 15px;
+  line-height: 2;
+}
+
+.signature {
+  font-family: Pacifico, cursive;
+  color: #ff66c4;
+  text-align: right;
+  margin-top: 20px;
+}
+
+.big-heart {
+  font-size: 95px;
+  text-align: center;
+  animation: heartbeat 1s infinite;
+  filter: drop-shadow(0 0 20px #ff168f);
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.12); }
+}
+
+.meter {
+  background: #35132f;
+  border-radius: 50px;
+  height: 22px;
+  overflow: hidden;
+  margin: 20px 0;
+  border: 1px solid #ff6bc4;
+}
+
+.meter-fill {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #ff168f, #ff83d0, #c084fc);
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.photo {
+  min-width: 0;
+  border: 2px solid #ff35a8;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #291331;
+  box-shadow: 0 0 15px #ff35a833;
+  transition: transform .3s, box-shadow .3s;
+}
+
+.photo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px #ff35a888;
+}
+
+.photo img {
+  display: block;
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+}
+
+.photo span {
+  display: block;
+  padding: 13px 8px;
+  text-align: center;
+  color: #ffb7e5;
+  font-weight: 600;
+}
+
+.small-note {
+  color: #d9b4d9;
+  font-size: 12px;
+  margin-top: 18px;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.center { text-align: center; }
+
+.game-area {
+  position: relative;
+  min-height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  overflow: hidden;
+  padding: 20px;
+}
+
+#savButton { position: relative; }
+
+.result {
+  text-align: center;
+  color: #ff91d3;
+  margin-top: 15px;
+  min-height: 30px;
+}
+
+.future li {
+  list-style: none;
+  padding: 12px 0;
+  border-bottom: 1px solid #ff35a833;
+}
+
+.future li:last-child { border-bottom: none; }
+
+#surprise {
+  display: none;
+  margin-top: 25px;
+  padding: 22px;
+  border-radius: 20px;
+  background: #ff35a81a;
+  border: 1px solid #ff35a866;
+  line-height: 1.9;
+  max-width: 650px;
+}
+
+.song-card {
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+  background:
+    radial-gradient(ellipse at top, #a21caf55, transparent 65%),
+    linear-gradient(145deg, #26102f, #100817);
+  border: 1px solid #ff35a8;
+  box-shadow: 0 0 30px #ff35a833;
+}
+
+.song-icon {
+  font-size: 65px;
+  margin-bottom: 15px;
+  animation: heartbeat 1.5s infinite;
+}
+
+.song-label {
+  color: #ff83d0;
+  letter-spacing: 3px;
+  font-size: 11px;
+}
+
+.song-title {
+  font-family: Pacifico, cursive;
+  color: #ff72c6;
+  font-size: 42px;
+  margin: 10px 0;
+  text-shadow: 0 0 18px #ff168f;
+}
+
+.song-artist { color: #e9c5ff; margin-bottom: 20px; }
+
+.song-message {
+  max-width: 500px;
+  margin: 0 auto 25px;
+  line-height: 1.9;
+  color: #ffe0f4;
+}
+
+.song-button {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.floating-heart {
+  position: fixed;
+  bottom: -40px;
+  z-index: -1;
+  pointer-events: none;
+  animation: floatUp linear forwards;
+}
+
+@keyframes floatUp {
+  to { transform: translateY(-115vh) rotate(360deg); opacity: 0; }
+}
+
+footer {
+  padding: 35px 15px;
+  text-align: center;
+  color: #ff9dd9;
+  border-top: 1px solid #ff35a844;
+  line-height: 2;
+}
+
+@media (max-width: 600px) {
+  nav { gap: 10px; }
+  nav a { font-size: 10px; }
+  section { padding: 40px 14px; }
+  .card { padding: 19px; }
+  .photo-grid { grid-template-columns: 1fr; }
+  .photo img { height: 300px; }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="#home">♡ Home</a>
+  <a href="#letter">♡ Love Letter</a>
+  <a href="#reasons">♡ Reasons</a>
+  <a href="#memories">♡ Photos</a>
+  <a href="#song">♡ Our Song</a>
+  <a href="#meter">♡ Love Meter</a>
+  <a href="#game">♡ Game</a>
+  <a href="#forever">♡ Forever</a>
+</nav>
+
+<header class="hero" id="home">
+  <div class="eyebrow">A LITTLE WEBSITE WITH A LOT OF LOVE</div>
+  <h1>Savanna Yoell 💗</h1>
+  <p>
+    To my favorite person in this entire universe...
+    if I could turn every thought of you into a star,
+    the night sky would never be dark again. ✨
+  </p>
+
+  <button onclick="showSurprise()">OPEN YOUR SURPRISE 💌</button>
+
+  <div id="surprise">
+    <h2 style="color:#ff83d0">HI BABYYYY!! 🥹💗</h2>
+    <p>
+      This whole little corner of the internet is for YOU.
+      Every heart, every word, every pixel is here to remind
+      you that you are appreciated, loved, and so very special to me.
+    </p>
+    <p><strong>I LOVE YOUUU SOOO MUCH MWAH MWAH! 💋</strong></p>
+  </div>
+
+  <p>♡ Nigel + Savanna ♡<br>
+  One love, a million memories, endless possibilities.</p>
+</header>
+
+<section id="letter">
+  <h2 class="section-title">💌 A Letter For You</h2>
+  <div class="card letter">
+    <p>My dearest Savanna,</p>
+    <p>
+      I just want you to know how much you mean to me.
+      You are one of the most special people in my life,
+      and I appreciate the little things you do more than
+      I can properly explain.
+    </p>
+    <p>
+      I love the way you make ordinary moments feel memorable.
+      I love sharing stories, laughing with you, and imagining
+      all the wonderful memories we still have ahead of us.
+    </p>
+    <p>
+      I know we won't have perfect days all the time,
+      but I hope we keep learning, listening, and choosing
+      kindness with each other. I want to celebrate your
+      happy moments and support you when things get difficult.
+    </p>
+    <p>
+      Thank you for being you, Savanna Yoell.
+      You are precious to me, and I hope I can keep showing
+      you how much you matter—not just with words, but with actions.
+    </p>
+    <p class="signature">Forever cheering for you, Nigel 💗</p>
+  </div>
+</section>
+
+<section id="reasons">
+  <h2 class="section-title">💗 Reasons I Adore You</h2>
+  <div class="grid">
+    <div class="card"><h3>♡ Your Smile</h3><p>Your happiness makes ordinary moments feel brighter.</p></div>
+    <div class="card"><h3>♡ Your Personality</h3><p>You have your own way of making moments unforgettable.</p></div>
+    <div class="card"><h3>♡ Your Kindness</h3><p>The little things you do can mean so much.</p></div>
+    <div class="card"><h3>♡ Your Laugh</h3><p>One of those sounds that can make my whole day better.</p></div>
+    <div class="card"><h3>♡ The Real You</h3><p>You don't have to be perfect to be appreciated and loved.</p></div>
+    <div class="card"><h3>♡ Our Memories</h3><p>Every shared joke and little moment becomes part of our story.</p></div>
+  </div>
+</section>
+
+<section id="memories">
+  <h2 class="section-title">📸 Our 10 Favorite Memories</h2>
+  <div class="card">
+    <p class="center" style="margin-bottom:25px;color:#ffc6e9">
+      Ten pictures, a million feelings, and memories I treasure with you. ♡
+    </p>
+
+    <div class="photo-grid">
+      <div class="photo"><img src="photo1.jpg" alt="Memory 1"><span>♡ Memory #1</span></div>
+      <div class="photo"><img src="photo2.jpg" alt="Memory 2"><span>♡ Memory #2</span></div>
+      <div class="photo"><img src="photo3.jpg" alt="Memory 3"><span>♡ Memory #3</span></div>
+      <div class="photo"><img src="photo4.jpg" alt="Memory 4"><span>♡ Memory #4</span></div>
+      <div class="photo"><img src="photo5.jpg" alt="Memory 5"><span>♡ Memory #5</span></div>
+      <div class="photo"><img src="photo6.jpg" alt="Memory 6"><span>♡ Memory #6</span></div>
+      <div class="photo"><img src="photo7.jpg" alt="Memory 7"><span>♡ Memory #7</span></div>
+      <div class="photo"><img src="photo8.jpg" alt="Memory 8"><span>♡ Memory #8</span></div>
+      <div class="photo"><img src="photo9.jpg" alt="Memory 9"><span>♡ Memory #9</span></div>
+      <div class="photo"><img src="photo10.jpg" alt="Memory 10"><span>♡ Memory #10</span></div>
+    </div>
+
+    <p class="small-note">
+      Upload photo1.jpg through photo10.jpg into the same GitHub
+      repository as this index.html file. 💕
+    </p>
+  </div>
+</section>
+
+<section id="song">
+  <h2 class="section-title">🎶 Our Favorite Song</h2>
+  <div class="card song-card">
+    <div class="song-icon">🎧💗🎶</div>
+    <p class="song-label">THE SONG THAT REMINDS ME OF US</p>
+    <h3 class="song-title">"Syempre"</h3>
+    <p class="song-artist">Our favorite Filipino song 🇵🇭</p>
+
+    <p class="song-message">
+      Some songs sound beautiful, but some songs feel like a memory.
+      This one will always have a special place in our little story,
+      Savanna. Every time I hear it, I'll think of you. 💕
+    </p>
+
+    <a class="song-button"
+       href="https://www.youtube.com/results?search_query=Syempre+Filipino+song"
+       target="_blank" rel="noopener noreferrer">
+      ▶ Listen to "Syempre"
+    </a>
+
+    <p class="small-note">Our song. Our memories. Our little world. ♡</p>
+  </div>
+</section>
+
+<section id="meter">
+  <h2 class="section-title">💘 The Love Meter</h2>
+  <div class="card center">
+    <div class="big-heart">💗</div>
+    <h2 style="font-size:38px;color:#ff83d0">INFINITY %</h2>
+    <p>Measuring this love is literally impossible.</p>
+    <div class="meter"><div class="meter-fill"></div></div>
+    <p>Still finding new reasons to appreciate you. ♾️</p>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">🌌 Our Future Wishlist</h2>
+  <div class="card future">
+    <ul>
+      <li>♡ Make more happy memories together</li>
+      <li>♡ Try new things and discover new places</li>
+      <li>♡ Support each other's dreams</li>
+      <li>♡ Laugh at jokes nobody else understands</li>
+      <li>♡ Learn from mistakes and communicate honestly</li>
+      <li>♡ Celebrate each other's wins, big and small</li>
+      <li>♡ Keep choosing patience, care, and kindness</li>
+    </ul>
+  </div>
+</section>
+
+<section id="game">
+  <h2 class="section-title">🎮 WHO LOVES MORE?</h2>
+  <div class="card center">
+    <p>Choose your answer, Savanna... 👀</p>
+    <div class="game-area" id="gameArea">
+      <button onclick="nigelWins()">Nigel 💗</button>
+      <button id="savButton">Savanna 💕</button>
+    </div>
+    <div class="result" id="gameResult">
+      Psst... try catching the Savanna button! 😂
+    </div>
+  </div>
+</section>
+
+<section id="forever">
+  <h2 class="section-title">♾️ Today, Tomorrow, Always</h2>
+  <div class="card center">
+    <p style="font-size:25px;color:#ff83d0">I choose to care about you. 💗</p>
+    <br>
+    <p>
+      No website could ever fit every thought, every laugh,
+      or every reason you matter to me. But I hope this little
+      creation makes you smile and reminds you that someone
+      is rooting for you, today and always.
+    </p>
+    <br>
+    <h2 style="font-family:Pacifico;color:#ff73c9;font-size:32px">
+      I Love You, Savanna Yoell! ♡
+    </h2>
+    <p>Made with all my heart by Nigel 💌</p>
+  </div>
+</section>
+
+<footer>
+  <p>♡ NIGEL + SAVANNA ♡</p>
+  <p>Made with love, a little chaos, and lots of pink. 💗</p>
+  <p>Our little corner of the internet ♾️</p>
+</footer>
+
+<script>
+function showSurprise() {
+  const surprise = document.getElementById("surprise");
+  surprise.style.display =
+    surprise.style.display === "block" ? "none" : "block";
+}
+
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.className = "floating-heart";
+  heart.textContent = ["💗", "💕", "💖", "♡", "✨"][
+    Math.floor(Math.random() * 5)
+  ];
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = (15 + Math.random() * 25) + "px";
+  const duration = 5 + Math.random() * 6;
+  heart.style.animationDuration = duration + "s";
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), duration * 1000);
+}
+setInterval(createHeart, 450);
+
+const savButton = document.getElementById("savButton");
+const gameArea = document.getElementById("gameArea");
+const gameResult = document.getElementById("gameResult");
+
+function dodgeButton() {
+  const maxX = Math.max(0, gameArea.clientWidth - savButton.offsetWidth - 10);
+  const maxY = Math.max(0, gameArea.clientHeight - savButton.offsetHeight - 10);
+  savButton.style.position = "absolute";
+  savButton.style.left = Math.random() * maxX + "px";
+  savButton.style.top = Math.random() * maxY + "px";
+  gameResult.textContent = "HAHAHA! CATCH ME IF YOU CAN, SAVANNA! 😂💗";
+}
+
+savButton.addEventListener("mouseenter", dodgeButton);
+savButton.addEventListener("touchstart", function(event) {
+  event.preventDefault();
+  dodgeButton();
+}, { passive: false });
+savButton.addEventListener("click", dodgeButton);
+
+function nigelWins() {
+  gameResult.textContent =
+    "HAHAHAHA 😭💗 Nigel wins this round! Savanna is still the VIP! 🏆";
+}
+</script>
+
+</body>
+</html>
